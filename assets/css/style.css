@@ -40,6 +40,19 @@
   margin: 0;
 }
 
+aside div {
+  position: relative;
+}
+
+aside div i.fa-tag {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 3.5rem;
+  color: grey;
+  opacity: 0.3;
+}
+
 body {
   font-family: Poppins, "Helvetica Neue", sans-serif;
   line-height: 1.6;
