@@ -1,4 +1,44 @@
 /* IMPOSTAZIONI GENERALI */
+.boxIcone {
+  font-size: 1.5rem;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  background-color: #ffffff88;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 5px;
+  z-index: 98;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.iconeDoppie {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 5rem;
+  right: 1rem;
+  gap: 10px;
+  z-index: 99;
+}
+
+.frecciaSu {
+  color: #a02571;
+  bottom: 1rem;
+  right: 1rem;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.iconeDoppie .boxIcone {
+  width: 3.5rem;
+  height: 3.5rem;
+  color: #3f6bca;
+  position: static;
+  margin: 0;
+}
 
 body {
   font-family: Poppins, "Helvetica Neue", sans-serif;
@@ -6,6 +46,7 @@ body {
   padding: 15px;
   background-image: url("../img/sfondo.png");
   background-position: center center;
+  position: relative;
 }
 
 * {
@@ -19,7 +60,11 @@ hr {
 /* HEADER */
 header {
   background: rgb(0, 160, 198);
-  background: linear-gradient(180deg, rgba(0, 160, 198, 1) 0%, rgba(3, 109, 134, 1) 68%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 160, 198, 1) 0%,
+    rgba(3, 109, 134, 1) 68%
+  );
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
@@ -27,6 +72,9 @@ header {
   box-shadow: 0 3px 3px #444;
   margin-bottom: 1.5em;
   padding: 2em 1.5em;
+  position: sticky;
+  top: 0px;
+  z-index: 100;
 }
 
 @media screen and (min-width: 800px) {
@@ -85,6 +133,25 @@ header nav li a::before {
 }
 
 /* MAIN */
+
+.clearfix span:first-child {
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+}
+
+.clearfix img:first-child {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  bottom: -15px;
+  z-index: 1;
+}
+
+.clearfix > img {
+  float: left;
+}
+
 main {
   background-color: #fff;
   box-shadow: 0 3px 3px #444;
@@ -112,6 +179,9 @@ section h2 {
   font-weight: bold;
   background-color: #a3a3a3;
   padding: 0px 1em;
+  position: absolute;
+  top: -20px;
+  left: 20px;
 }
 
 /* ELEMENTI NEL MAIN - ARTICLE */
@@ -295,6 +365,24 @@ button {
   button {
     padding: 15px 30px;
   }
+
+  .iconeDoppie {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 2rem;
+    right: 1rem;
+    gap: 10px;
+    z-index: 999;
+  }
+
+  .iconeDoppie .boxIcone {
+    width: 3.5rem;
+    height: 3.5rem;
+    color: #3f6bca;
+    position: static;
+    margin: 0;
+  }
 }
 
 /* ELEMENTI NELL' ASIDE */
@@ -329,7 +417,11 @@ aside div p:last-child {
 /* FOOTER */
 footer {
   background: rgb(53, 53, 53);
-  background: linear-gradient(0deg, rgba(53, 53, 53, 1) 0%, rgba(5, 85, 103, 1) 68%);
+  background: linear-gradient(
+    0deg,
+    rgba(53, 53, 53, 1) 0%,
+    rgba(5, 85, 103, 1) 68%
+  );
   box-shadow: 0 3px 3px #444;
   color: #f0f0f0;
   padding: 1em;
